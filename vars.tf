@@ -1,0 +1,10 @@
+variable "project_name" {}
+variable "project_id" {}
+variable "cluster_name" {}
+variable "nodes_size" {}
+variable "network_name" {}
+variable "cidr_block" {}
+variable "location" {}
+variable "ssh_source_ips" {}
+variable "autoscale_min_nodes" {}
+variable "autoscale_max_nodes" {}
