@@ -30,7 +30,7 @@ resource "google_compute_firewall" "gke_network" {
 
   allow {
     protocol = "tcp"
-    ports    = ["80", "8080", "30000"]
+    ports    = ["80", "8080-8090", "30000"]
   }
 
   source_ranges = var.ssh_source_ips
