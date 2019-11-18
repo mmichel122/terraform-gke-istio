@@ -14,6 +14,9 @@ resource "google_container_cluster" "primary" {
       disabled = false
       auth     = "AUTH_MUTUAL_TLS"
     }
+    cloudrun_config {
+      disabled = false
+    }
   }
 }
 
@@ -35,7 +38,7 @@ resource "google_container_node_pool" "primary_nodes" {
 
   node_config {
     machine_type = var.nodes_size
-    disk_type    = "pd-ssd"
+    disk_type    = "pd-standard"
     oauth_scopes = [
       "https://www.googleapis.com/auth/devstorage.read_only",
       "https://www.googleapis.com/auth/logging.write",
