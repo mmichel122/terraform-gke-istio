@@ -3,7 +3,7 @@ output "network_vpc_uri" {
 }
 
 output "subnetwork_link" {
-  value = "${google_compute_subnetwork.europe.1.name}"
+  value = "${google_compute_subnetwork.europe.0.name}"
 }
 
 output "vpc_name" {

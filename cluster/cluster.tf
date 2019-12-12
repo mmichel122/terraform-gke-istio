@@ -23,8 +23,8 @@ resource "google_container_cluster" "primary" {
 resource "google_container_node_pool" "primary_nodes" {
   name       = "nodes"
   location   = var.location
-  cluster    = "${google_container_cluster.primary.name}"
-  node_count = 1
+  cluster    = google_container_cluster.primary.name
+  #node_count = 1
 
   autoscaling {
     min_node_count = var.autoscale_min_nodes
