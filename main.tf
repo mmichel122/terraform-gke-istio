@@ -1,11 +1,11 @@
 provider "google" {
-  credentials = "${file("./creds/serviceaccount.json")}"
+  credentials = file("./creds/serviceaccount.json")
   project     = var.project_id
   region      = var.location
 }
 
 provider "google-beta" {
-  credentials = "${file("./creds/serviceaccount.json")}"
+  credentials = file("./creds/serviceaccount.json")
   project     = var.project_id
   region      = var.location
 }
